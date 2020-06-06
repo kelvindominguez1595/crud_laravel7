@@ -19,7 +19,7 @@ class CreateProductosTable extends Migration
             $table->integer('cantidad',0);
             $table->double('precio_compra', 8,2);
             $table->double('precio_venta', 8,2);
-            $table->integer('categorias_id');
+            $table->unsignedBigInteger('categorias_id');
             $table->foreign('categorias_id')->references('id')->on('categorias');
             $table->timestamps();
         });
