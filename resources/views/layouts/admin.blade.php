@@ -134,6 +134,7 @@
                                 </div>
                             </div>
                         </div>
+                        @yield('content')
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
@@ -653,6 +654,6 @@
         </div>
     
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script>
+<script src="{{ asset('js/scripts.js') }}"></script>
 </body>
 </html>
