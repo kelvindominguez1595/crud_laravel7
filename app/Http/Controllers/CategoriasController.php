@@ -36,7 +36,10 @@ class CategoriasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $save_categoria = Categorias::create([
+            'categoria' => $request['categoria']
+        ]);
+        return redirect('/categorias')->with('message', 'Registro exitoso');
     }
 
     /**
