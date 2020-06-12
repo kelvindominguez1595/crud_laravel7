@@ -59,9 +59,10 @@ class CategoriasController extends Controller
      * @param  \App\Categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function edit(Categorias $categorias)
+    public function edit($id)
     {
-        //
+        $datos = Categorias::find($id);
+        return view('categorias.editar', compact('datos'));
     }
 
     /**
