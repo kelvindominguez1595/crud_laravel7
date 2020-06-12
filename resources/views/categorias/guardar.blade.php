@@ -7,7 +7,8 @@
                 <i class="fa fa-save"></i> Registrar categorias
             </div>
             <div class="card-body">
-                <form class="form-horizontal" action="{{ route('categorias') }}" method="POST">
+                <form class="form-horizontal" action="{{ route('categorias.store') }}" method="POST">
+                    @csrf
                     <div class="form-group">
                         <label for="categoria">Categoria</label>
                         <input type="text" name="categoria" class="form-control" placeholder="Categoria">
