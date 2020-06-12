@@ -89,8 +89,11 @@ class CategoriasController extends Controller
      * @param  \App\Categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categorias $categorias)
+    public function destroy($id)
     {
-        //
+        $categoria = Categorias::find($id);
+        $categoria->delete();
+
+        return redirect('/categorias')->with('message', 'Registro borrado');
     }
 }
