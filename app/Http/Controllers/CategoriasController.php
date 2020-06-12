@@ -25,7 +25,7 @@ class CategoriasController extends Controller
      */
     public function create()
     {
-        return view();
+        return view('categorias.guardar');
     }
 
     /**
