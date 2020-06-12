@@ -21,10 +21,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            @foreach ($list_categoria as $item)                                
+                                <tr>
+                                    <td>
+                                        {{ $item->categoria }}
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('categorias.edit', $item->id) }}" class="btn btn-primary">Editar</a>
+                                        <a href="{{ route('categorias.destroy', $item->id) }}" class="btn btn-danger">Eliminar</a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
