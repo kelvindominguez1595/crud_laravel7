@@ -7,7 +7,10 @@
             <li class="breadcrumb-item active">Categorias</li>
         </ol>
         <div class="card mb-4">
-            <div class="card-header"> <i class="fa fa-cubes mr-1"></i>Categorias</div>
+            <div class="card-header"> 
+                <i class="fa fa-cubes mr-1"></i>Categorias 
+                <a class="btn btn-success" href="{{ url('categorias/create') }}">Agregar</a>
+            </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered">
