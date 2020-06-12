@@ -11,10 +11,10 @@
                 @csrf
                 <div class="form-group">
                     <label for="categoria">Categoria</label>
-                    <input type="text" name="categoria" class="form-control" placeholder="Categoria" value="{{ $datos->categorias }}">
+                    <input type="text" name="categoria" class="form-control" placeholder="Categoria" value="{{ $datos->categoria }}">
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Registrar" class="btn btn-primary">
+                    <input type="submit" value="Editar categoria" class="btn btn-primary">
                 </div>
             </form>
         </div>
