@@ -72,9 +72,15 @@ class CategoriasController extends Controller
      * @param  \App\Categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categorias $categorias)
+    public function update(Request $request, $id)
     {
-        //
+        $categoria = Categorias::find($id);
+        $categoria->fill([
+            'categoria' => $request['categoria'],
+        ]);
+        $categoria->save();
+
+        return redirect('/categorias')->with('message', 'Categoria actualizada');
     }
 
     /**

@@ -9,6 +9,7 @@
         <div class="card-body">
             <form class="form-horizontal" action="{{ route('categorias.update', $datos->id) }}" method="POST">
                 @csrf
+                
                 <div class="form-group">
                     <label for="categoria">Categoria</label>
                     <input type="text" name="categoria" class="form-control" placeholder="Categoria" value="{{ $datos->categoria }}">
